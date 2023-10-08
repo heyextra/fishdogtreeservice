@@ -12,11 +12,10 @@ body {
 }
 
 main {
-  padding: 2rem 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+
  
 }
 
