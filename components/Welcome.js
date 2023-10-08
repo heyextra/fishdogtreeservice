@@ -2,15 +2,16 @@ export default function Welcome() {
   return (
     <>
      <section className="next-splash">
+     <div className="splash-banner">
         <div className="item">
-            <button>
-                <h1>Call us before its too late!</h1>
-            </button>
             <h2>
                 check a map of our coverage
             </h2>
         </div>
+        </div>
       </section>
+
+      
       <section className="splash">
         <div className="splash-img">
         <h1>
@@ -29,22 +30,22 @@ export default function Welcome() {
         <div className="splash-text">
             <ul className="splash-list">
               <li>
-                <h3>Certified Arborists:</h3> Our team consists of
+                <h3>Certified Arborists</h3> Our team consists of
                 certified arborists who are passionate about tree care and
                 continually stay updated on industry best practices.
               </li>
               <li>
-                <h3>Safety First:</h3> We prioritize safety in all our
+                <h3>Safety First</h3> We prioritize safety in all our
                 tree care services, using the latest safety equipment and
                 techniques to protect your property and our team.
               </li>
               <li>
-                <h3>Environmentally Friendly:</h3> We are committed to
+                <h3>Environmentally Friendly</h3> We are committed to
                 eco-friendly practices and tree preservation, minimizing our
                 impact on the environment.
               </li>
               <li>
-                <h3>Customer Satisfaction:</h3> Your satisfaction is our
+                <h3>Customer Satisfaction</h3> Your satisfaction is our
                 top priority. We strive for excellence in every service we
                 provide and offer competitive pricing.
               </li>
