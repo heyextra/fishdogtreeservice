@@ -1,14 +1,44 @@
-import styles from './FeedbackForm.module.css'
+import { useState } from "react";
+import styles from "./FeedbackForm.module.css";
 
 export default function Welcome() {
+  const [zipcode, setZipcode] = useState("");
+  const [result, setResult] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(`/api/zipcodes?zipcode=${zipcode}`);
+      if (response.ok) {
+        const data = await response.json();
+        setResult(data.result ? "Zipcode found" : "Zipcode not found");
+      } else {
+        setResult("Error: Unable to fetch data");
+      }
+    } catch (error) {
+      setResult("Error: " + error.message);
+    }
+  };
   return (
     <>
       <section className="hero-section">
         <div className="hero-img">
           <div className="splash-banner">
-            <h3>Enter your zip code below.</h3>
-            <label htmlFor="zipcode">ZipCode</label>
-        <input id="zipcode" className={styles['form-field']} type="text" name="name" />
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="zipcode">Enter your zip code below.</label>
+              <input
+                id="zipcode"
+                className={styles["form-field"]}
+                type="text"
+                name="name"
+                placeholder={"90210"}
+              /> 
+            <button type="submit" className={styles["button"]}>
+              Enter
+            </button>
+            </form>
+            <div>{result}</div>
           </div>
         </div>
       </section>
