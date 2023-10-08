@@ -1,0 +1,8 @@
+.services{
+    background-color: linen;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px; /* Adjust the gap between items as needed */
+    list-style: none; /* Remove the default list bullet points */
+    padding: 1em; /* Remove default padding */
+}
