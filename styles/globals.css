@@ -115,13 +115,32 @@ border: #1b3d2e 1px solid;
   .about-list-item:hover > h3{
     color: #9be2c3;
     }
-.service-item{
-  border: #1b3d2e 1px solid;
-  padding: 0 1rem 1rem;
+
+.img{
+  background-image: url('/treework.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.service-item:hover{
-  background-color: #1b3d2e;
-  }
-  .service-item:hover > h3{
-    color: #9be2c3;
+
+    .service-list{
+      margin: 0 auto;
+      padding: 0;
+      width: 85vw;
+    
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+      list-style: none;
+      color: whitesmoke;
+      gap: 3px;
     }
+    .service-list-item{
+    border: #1b3d2e 1px solid;
+      padding: 0 1rem 1rem;
+    }
+    .service-list-item:hover{
+      background-color: #234e3b
+      }
+      .service-list-item:hover > h3{
+        color: #9be2c3;
+        }
