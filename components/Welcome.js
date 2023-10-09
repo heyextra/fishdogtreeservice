@@ -1,5 +1,10 @@
 import { useState } from "react";
 import styles from "./FeedbackForm.module.css";
+import { JetBrains_Mono } from "next/font/google";
+
+
+
+const jetBrains = JetBrains_Mono({weight:'400', subsets: ['latin']})
 
 export default function Welcome() {
   const [zipcode, setZipcode] = useState("");
@@ -59,7 +64,7 @@ export default function Welcome() {
 
       <section className="about">
         <div className="about-description">
-          <h1>Your Trusted Tree Care Experts in the Philadelphia Area!</h1>
+          <h1 className={jetBrains.className}>Your Trusted Tree Care Experts in the Philadelphia Area!</h1>
           <p>
             At Fishdog Tree Service, we are passionate about trees and committed
             to their health and well-being. With years of experience in the
@@ -71,22 +76,22 @@ export default function Welcome() {
         </div>
         <ul className="about-list">
           <li className="about-list-item">
-            <h3>Certified Arborists</h3> Our team consists of certified
+            <h3 className={jetBrains.className}>Certified Arborists</h3> Our team consists of certified
             arborists who are passionate about tree care and continually stay
             updated on industry best practices.
           </li>
           <li className="about-list-item">
-            <h3>Safety First</h3> We prioritize safety in all our tree care
+            <h3 className={jetBrains.className}>Safety First</h3> We prioritize safety in all our tree care
             services, using the latest safety equipment and techniques to
             protect your property and our team.
           </li>
           <li className="about-list-item">
-            <h3>Environmentally Friendly</h3> We are committed to eco-friendly
+            <h3 className={jetBrains.className}>Environmentally Friendly</h3> We are committed to eco-friendly
             practices and tree preservation, minimizing our impact on the
             environment.
           </li>
           <li className="about-list-item">
-            <h3>Customer Satisfaction</h3> Your satisfaction is our top
+            <h3 className={jetBrains.className}>Customer Satisfaction</h3> Your satisfaction is our top
             priority. We strive for excellence in every service we provide and
             offer competitive pricing.
           </li>

@@ -25,6 +25,9 @@ header{
   transition: all .7s ease-in-out;
 
 }
+.title{
+  margin: 0;
+}
 @media (min-width: 600px) {
   header{
     padding: 0 10px 0 12vw;
@@ -47,9 +50,12 @@ footer{
   align-self: flex-end;
 }
 main{
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-
+  width: 100%;
+  min-width: 100vw;
 }
 
 .hero-section{
@@ -115,26 +121,44 @@ border: #1b3d2e 1px solid;
     }
 
 .img{
-  background-image: url('/treework.jpg');
+  background-image: url('/climber.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-bottom-left-radius: 120px;
+  border-top-left-radius: 120px;
+display: grid;
+padding: 5rem;
+justify-content: flex-end;
+justify-items: flex-end;
+}
+
+.services-section{
+  display: grid;
+  grid-template-columns: 95vw;
+justify-content: flex-end;
+width: 100%;
+min-height: 75vh;
+
 }
 
     .service-list{
+      text-align: center;
       margin: 0 auto;
       padding: 0;
       width: 85vw;
-    
       display: grid;
       grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
       list-style: none;
       color: whitesmoke;
       gap: 3px;
+      direction: rtl;
     }
     .service-list-item{
     border: #1b3d2e 1px solid;
       padding: 0 1rem 1rem;
+      background-color: rgba(35, 78, 59,0.5);
+     
     }
     .service-list-item:hover{
       background-color: #234e3b
