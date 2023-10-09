@@ -27,13 +27,13 @@ header{
 }
 @media (min-width: 600px) {
   header{
-    padding-left: 12vw;
     padding: 0 10px 0 12vw;
   }
+  .title{
+    margin-right: 20%;
+  }
 }
-.title{
-  margin-right: 20%;
-}
+
 .navlinks{
   width: 100%;
 }
@@ -46,13 +46,11 @@ li > a, li > a:active, li > a:visited{
 footer{
   align-self: flex-end;
 }
+main{
+  display: flex;
+  flex-direction: column;
 
-.splash{
-  color: antiquewhite;
-  text-align: center;
-  padding: 2rem;
 }
-
 
 .hero-section{
   display: grid;
