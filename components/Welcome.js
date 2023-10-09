@@ -4,22 +4,30 @@ import styles from "./FeedbackForm.module.css";
 export default function Welcome() {
   const [zipcode, setZipcode] = useState("");
   const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent the default form submission behavior.
 
     try {
-      const response = await fetch(`/api/zipcodes?zipcode=${zipcode}`);
+      setLoading(true);
+
+      // Make a request to the Netlify function using fetch.
+      const response = await fetch(`/api/zipcode?zipcode=${zipcode}`);
+      const data = await response.json();
+
       if (response.ok) {
-        const data = await response.json();
-        setResult(data.result ? "Zipcode found" : "Zipcode not found");
+        setResult(data.result ? `We serve the ${zipcode} area` : `${zipcode} is out of our zone.` );
       } else {
-        setResult("Error: Unable to fetch data");
+        setResult("Error: " + data.error);
       }
     } catch (error) {
-      setResult("Error: " + error.message);
+      setResult("An error occurred: " + error.message);
+    } finally {
+      setLoading(false);
     }
   };
+
   return (
     <>
       <section className="hero-section">
@@ -33,12 +41,18 @@ export default function Welcome() {
                 type="text"
                 name="name"
                 placeholder={"90210"}
-              /> 
-            <button type="submit" className={styles["button"]}>
-              Enter
-            </button>
+                value={zipcode}
+                onChange={(e) => setZipcode(e.target.value)}
+              />
+              <button
+                type="submit"
+                className={styles["button"]}
+                disabled={loading}
+              >
+                Enter
+              </button>
             </form>
-            <div>{result}</div>
+            <div>{loading ? "Loading..." : result}</div>
           </div>
         </div>
       </section>

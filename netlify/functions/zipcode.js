@@ -1,18 +1,37 @@
 import zipcodes from './zipcodes.json';
 
 export const handler = async (event) => {
-  const { zipcode } = event.queryStringParameters; // Assuming you expect the zipcode as a query parameter.
+  try {
+    const { zipcode } = event.queryStringParameters;
 
-  function searchZipcodes(source, query) {
-    return source.includes(query);
+    if (!zipcode) {
+        console.log(event);
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: 'zipcode parameter is missing' }),
+      };
+    }
+
+    // Convert zipcode to a string if it's not already, and ensure it's trimmed.
+    const searchZipcode = String(zipcode).trim();
+
+    const result = zipcodes.includes(searchZipcode);
+
+    if (result) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ result: true }),
+      };
+    } else {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ result: false }),
+      };
+    }
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Internal server error' }),
+    };
   }
-
-  const result = searchZipcodes(zipcodes, zipcode);
-
-  // Netlify Functions need to return an object with a statusCode
-  // Other properties such as headers or body can also be included.
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ result }), // Corrected the response body format
-  };
 };
