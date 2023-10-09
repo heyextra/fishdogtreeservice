@@ -1,4 +1,7 @@
-# Next.js Toolbox Template
+# THIS REPO STARTED WITH - Next.js Toolbox Template
+
+# Repurposed in order to make a website that is mostly static with few dynamic elements using Next.JS.
+# NOW I KNOW NEXT.JS! YAYAYAYAYAYAYAY!
 
 ![Netlify + Next](https://user-images.githubusercontent.com/43764894/223561089-2b729a3d-2963-4fc1-ad9b-a8618cd3c87e.png)
 
