@@ -166,3 +166,7 @@ min-height: 75vh;
       .service-list-item:hover > h3{
         color: #9be2c3;
         }
+
+        .contact-section{
+          margin: 0 auto;
+        }
