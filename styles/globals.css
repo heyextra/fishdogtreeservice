@@ -12,6 +12,13 @@ body {
 * {
   box-sizing: border-box;
 }
+/* .logo{
+  height: 70px;
+  width: auto;
+  position: absolute;
+  top: 5px;
+  left:5px;
+} */
 header {
   padding: 0 10px;
   margin: 0 auto;
@@ -24,6 +31,7 @@ header {
   color: whitesmoke;
   transition: all 0.7s ease-in-out;
 }
+
 .title {
   margin: 0;
 }
@@ -33,6 +41,9 @@ header {
   }
   .title {
     margin-right: 20%;
+  }
+  .contact-section{
+    padding-left: 12vw;
   }
 }
 
@@ -101,8 +112,8 @@ main {
   background-color: #1b3d2e;
 gap: 1rem;
   padding: 2rem;
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 120px;
+  border-top-right-radius: 120px;
   color: whitesmoke;
   height: auto;
   width: 80%;
@@ -195,8 +206,8 @@ gap: 1rem;
   margin: 0;
 }
 .contact-section {
-  padding-left: 12vw;
-  padding-right: 40px;
+  margin: 0 auto;
+  padding: 40px;
   display: flex;
   gap: 2rem;
 }
