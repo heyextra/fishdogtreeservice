@@ -89,6 +89,12 @@ main {
   justify-items: flex-end;
   height: 100%;
 }
+.hero-container{
+  display: grid;
+  padding: 3rem;
+  color: whitesmoke;
+  text-shadow: #1b3d2e 2px 2px 6px;
+}
 
 .splash-banner {
   margin-top: -2px;
@@ -178,12 +184,32 @@ gap: 1rem;
   background-color: rgba(35, 78, 59, 0.5);
 }
 .service-list-item:hover {
-  background-color: #234e3b;
+  background-color: #1c3d2e;
 }
 .service-list-item:hover > h3 {
   color: #9be2c3;
 }
-
+.contact-heading{
+  text-align: right;
+  padding-right: 40px;
+  margin: 0;
+}
 .contact-section {
-  margin: 0 auto;
+  padding-left: 12vw;
+  padding-right: 40px;
+  display: flex;
+  gap: 2rem;
+}
+.contact-img{
+  max-width: 55%;
+  height: auto;
+}
+
+@media (max-width:800px) {
+  .contact-section{
+    flex-direction: column;
+  }
+  .contact-img{
+    max-width: 100%;
+  }
 }

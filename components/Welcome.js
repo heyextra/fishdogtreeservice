@@ -40,8 +40,12 @@ export default function Welcome() {
       <section className="hero-section">
         <div className="hero-section-title">
           <div className="hero-img">
-            <h1 className="hero-title">Something urgent?</h1>
-            <p>Give us a call now!</p>
+            <div className="hero-container">
+              <h2 className={"hero-title " + jetBrains.className}>
+                Something urgent?
+              </h2>
+              <h2 className={jetBrains.className}>Request an immediate dispatch!</h2>
+            </div>
           </div>
         </div>
 
@@ -68,25 +72,27 @@ export default function Welcome() {
             </form>
             <div>{loading ? "Loading..." : result}</div>
           </div>
-         <h2>Check to see if we serve your zip code!</h2>
+          <h1 className={jetBrains.className}>
+            Check to see if we serve your zip code!
+          </h1>
         </div>
       </section>
 
       <section className="about">
-      <div className="about-description">
-            <h1 className={jetBrains.className}>
-              Your Trusted Tree Care Experts in the Philadelphia Area!
-            </h1>
-            <p>
-              At Fishdog Tree Service, we are passionate about trees and
-              committed to their health and well-being. With years of experience
-              in the arboriculture industry, our team of certified arborists is
-              here to provide you with a comprehensive range of tree care
-              services. Whether you're a homeowner, business owner, or
-              municipality, we have the expertise and dedication to keep your
-              trees thriving.
-            </p>
-          </div>
+        <div className="about-description">
+          <h2 className={jetBrains.className}>
+            Your Trusted Tree Care Experts in the Greater Philadelphia & Greater
+            Atlanta Areas!
+          </h2>
+          <p>
+            At Fishdog Tree Service, we are passionate about trees and committed
+            to their health and well-being. With years of experience in the
+            arboriculture industry, our team of certified arborists is here to
+            provide you with a comprehensive range of tree care services.
+            Whether you're a homeowner, business owner, or municipality, we have
+            the expertise and dedication to keep your trees thriving.
+          </p>
+        </div>
         <ul className="about-list">
           <li className="about-list-item">
             <h3 className={jetBrains.className}>Certified Arborists</h3> Our

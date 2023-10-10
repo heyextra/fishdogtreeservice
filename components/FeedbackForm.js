@@ -1,4 +1,6 @@
 import styles from "./FeedbackForm.module.css";
+import Image from "next/image";
+import dogPic from "../public/dogs.jpg"
 
 export default function FeedbackForm() {
   return (
@@ -9,7 +11,7 @@ export default function FeedbackForm() {
         data-netlify-honeypot="bot-field"
         name="feedback"
         method="POST"
-        action="/success" netlify
+        action="/success"
       >
         <input type="hidden" name="form-name" value="feedback" />
         <p className={styles.hidden}>
@@ -47,6 +49,7 @@ export default function FeedbackForm() {
           Submit
         </button>
       </form>
+      <Image src={dogPic} className="contact-img"/>
     </section>
   );
 }
