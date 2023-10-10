@@ -4,16 +4,15 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color:  #234e3b;
-    min-height: 100vh;
-    
+  background-color: #234e3b;
+  min-height: 100vh;
+  color: whitesmoke;
 }
-
 
 * {
   box-sizing: border-box;
 }
-header{
+header {
   padding: 0 10px;
   margin: 0 auto;
   display: flex;
@@ -21,35 +20,36 @@ header{
   justify-content: space-between;
   background: #234e3b;
   width: 100%;
+  height: 75px;
   color: whitesmoke;
-  transition: all .7s ease-in-out;
-
+  transition: all 0.7s ease-in-out;
 }
-.title{
+.title {
   margin: 0;
 }
 @media (min-width: 600px) {
-  header{
-    padding: 0 10px 0 12vw;
+  header {
+    padding: 0 40px 0 12vw;
   }
-  .title{
+  .title {
     margin-right: 20%;
   }
 }
 
-.navlinks{
+.navlinks {
   width: 100%;
 }
-li > a, li > a:active, li > a:visited{
+li > a,
+li > a:active,
+li > a:visited {
   text-decoration: none;
   color: whitesmoke;
 }
 
-
-footer{
+footer {
   align-self: flex-end;
 }
-main{
+main {
   padding: 0;
   margin: 0;
   display: flex;
@@ -58,115 +58,132 @@ main{
   min-width: 100vw;
 }
 
-.hero-section{
+/* .hero-section {
   display: grid;
   grid-template-columns: 95vw;
   justify-content: flex-end;
   justify-items: flex-end;
   align-items: center;
   height: 75vh;
+} */
+.hero-section-title{
+    display: grid;
+    grid-template-columns: 95vw;
+    justify-content: flex-end;
+    align-items: center;
+    height: 250px;
+    margin-bottom: 30px;
 }
-.hero-img{
-  background-image: url('/treework.jpg');
+.hero-title{
+  align-self: flex-end;
+}
+.hero-img {
+  background-image: url("/treework.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-bottom-left-radius: 120px;
   border-top-left-radius: 120px;
-  display: flex;
-  align-items: center;
+  display: grid;
   justify-content: flex-end;
-  width: 100%;
+  justify-items: flex-end;
   height: 100%;
 }
 
-.splash-banner{
+.splash-banner {
   margin-top: -2px;
   background-color: #1b3d2e;
-  min-width: 40vw;
+gap: 1rem;
   padding: 2rem;
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
   color: whitesmoke;
   height: auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
-.about{
+.splash-form{
+  width: 40%;
+}
+.about {
   margin: 0 auto;
   text-align: center;
   color: whitesmoke;
 }
-.about-description{
+.about-description {
   margin: 0 auto;
   width: 75vw;
 }
-.about-list{
+.about-list {
   padding: 0;
   width: 100%;
   background-color: #1b3d2e;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   list-style: none;
   color: whitesmoke;
   gap: 3px;
 }
-.about-list-item{
-border: #1b3d2e 1px solid;
+.about-list-item {
+  border: #1b3d2e 1px solid;
   padding: 0 1rem 1rem;
 }
-.about-list-item:hover{
-  background-color: #234e3b
-  }
-  .about-list-item:hover > h3{
-    color: #9be2c3;
-    }
+.about-list-item:hover {
+  background-color: #234e3b;
+}
+.about-list-item:hover > h3 {
+  color: #9be2c3;
+}
 
-.img{
-  background-image: url('/climber.jpg');
+.img {
+  background-image: url("/climber.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-bottom-left-radius: 120px;
   border-top-left-radius: 120px;
-display: grid;
-padding: 5rem;
-justify-content: flex-end;
-justify-items: flex-end;
+  display: grid;
+  padding: 5rem;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  height: 100%;
 }
 
-.services-section{
+.services-section-title {
   display: grid;
   grid-template-columns: 95vw;
-justify-content: flex-end;
-width: 100%;
-min-height: 75vh;
-
+  justify-content: flex-end;
+  align-items: center;
+  height: 250px;
+  margin-bottom: 30px;
 }
 
-    .service-list{
-      text-align: center;
-      margin: 0 auto;
-      padding: 0;
-      width: 85vw;
-      display: grid;
-      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-      list-style: none;
-      color: whitesmoke;
-      gap: 3px;
-      direction: rtl;
-    }
-    .service-list-item{
-    border: #1b3d2e 1px solid;
-      padding: 0 1rem 1rem;
-      background-color: rgba(35, 78, 59,0.5);
-     
-    }
-    .service-list-item:hover{
-      background-color: #234e3b
-      }
-      .service-list-item:hover > h3{
-        color: #9be2c3;
-        }
+.service-list {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 85vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  color: whitesmoke;
+  gap: 3px;
+  direction: rtl;
+}
+.service-list-item {
+  border: #1b3d2e 1px solid;
+  padding: 0 1rem 1rem;
+  background-color: rgba(35, 78, 59, 0.5);
+}
+.service-list-item:hover {
+  background-color: #234e3b;
+}
+.service-list-item:hover > h3 {
+  color: #9be2c3;
+}
 
-        .contact-section{
-          margin: 0 auto;
-        }
+.contact-section {
+  margin: 0 auto;
+}

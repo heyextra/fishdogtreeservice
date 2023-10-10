@@ -9,8 +9,11 @@ export default function Services() {
   return (
     <>
       <section className="services-section">
+        <div className="services-section-title">
         <div className="img">
           <h1 className={jetBrains.className}>Our Arborist Services</h1>
+        </div>
+        </div>
           <ul className="service-list">
             <li className="service-list-item">
               <h3 className={jetBrains.className}>Tree Pruning and Trimming</h3>
@@ -55,7 +58,6 @@ export default function Services() {
               recommendations.
             </li>
           </ul>
-        </div>
       </section>
     </>
   );
